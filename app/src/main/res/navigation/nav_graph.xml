@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <!-- First Fragment -->
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.homework4berksuntay.FirstFragment"
+        android:label="First Fragment"
+        tools:layout="@layout/fragment_first">
+        <!-- Action to navigate to SecondFragment -->
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+
+    <!-- Second Fragment -->
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.homework4berksuntay.SecondFragment"
+        android:label="Second Fragment"
+        tools:layout="@layout/fragment_second">
+        <!-- Action to navigate to ThirdFragment -->
+        <action
+            android:id="@+id/action_SecondFragment_to_ThirdFragment"
+            app:destination="@id/ThirdFragment" />
+        <!-- Action to navigate back to FirstFragment -->
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+    <!-- Third Fragment -->
+    <fragment
+        android:id="@+id/ThirdFragment"
+        android:name="com.example.homework4berksuntay.ThirdFragment"
+        android:label="Third Fragment"
+        tools:layout="@layout/fragment_third">
+        <!-- Action to navigate back to SecondFragment -->
+        <action
+            android:id="@+id/action_ThirdFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <!-- Action to navigate back to FirstFragment -->
+        <action
+            android:id="@+id/action_ThirdFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+</navigation>
